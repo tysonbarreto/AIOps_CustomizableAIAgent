@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: aiops
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi>=0.118.0
+Requires-Dist: langchain-community>=0.3.30
+Requires-Dist: langchain-core>=0.3.77
+Requires-Dist: langchain-groq>=0.3.8
+Requires-Dist: langgraph>=0.6.8
+Requires-Dist: pdm>=2.25.9
+Requires-Dist: pip>=25.2
+Requires-Dist: pydantic>=2.11.9
+Requires-Dist: python-dotenv>=1.1.1
+Requires-Dist: setuptools>=80.9.0
+Requires-Dist: streamlit>=1.50.0
+Requires-Dist: uvicorn>=0.37.0
+Requires-Dist: langchain-tavily>=0.2.11
+
+# aiops

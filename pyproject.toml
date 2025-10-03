@@ -1,0 +1,25 @@
+[project]
+name = "aiops"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.118.0",
+    "langchain-community>=0.3.30",
+    "langchain-core>=0.3.77",
+    "langchain-groq>=0.3.8",
+    "langgraph>=0.6.8",
+    "pdm>=2.25.9",
+    "pip>=25.2",
+    "pydantic>=2.11.9",
+    "python-dotenv>=1.1.1",
+    "setuptools>=80.9.0",
+    "streamlit>=1.50.0",
+    "uvicorn>=0.37.0",
+    "langchain-tavily>=0.2.11",
+]
+
+[tool.pdm.build]
+package-dir='.'
+
