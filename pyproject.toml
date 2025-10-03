@@ -17,9 +17,16 @@ dependencies = [
     "setuptools>=80.9.0",
     "streamlit>=1.50.0",
     "uvicorn>=0.37.0",
-    "langchain-tavily>=0.2.11",
+    "langchain-tavily>=0.2.11"
 ]
 
 [tool.pdm.build]
-package-dir='.'
+package-dir='src'
+
+[build-system]
+requires=["pdm-backend","pdm-build-locked"]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution=true
 
