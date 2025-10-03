@@ -3,6 +3,9 @@ FROM python:$PYTHON_VERSION AS compiler
 
 USER root
 
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
+
 WORKDIR /application
 
 COPY src/ /application/src
