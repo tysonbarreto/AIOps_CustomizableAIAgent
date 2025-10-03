@@ -1,6 +1,5 @@
 pipeline{
     agent any
-
     stages{
         stage("Clonning GitHub Repo to Jenkins"){
             steps{
@@ -11,5 +10,20 @@ pipeline{
                 }
         }
     }
+        stage('Sonarqube Analysis'){
+            steps{
+                withCredentials([string(credentialsId:'sonarqube-token',variable:'SONAR_TOKEN')]){
+                    withSonarQubeEnv('Sonarqube'){
+                        sh"""
+                        tool Sonarqube/bin/sonar-scanner \
+                        -Dsonar.projectKey=AIOps_CustomizableAIAgent \
+                        -Dsonar.sources=. \
+                        -Dsonar.host.url=http://sonarqube-dind:9000 \
+                        -Dsonar.login=${SONAR_TOKEN}
+                        """
+                    }
+                }
+            }
+        }
 }
 }
